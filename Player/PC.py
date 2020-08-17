@@ -1,5 +1,5 @@
 from Enums import Incidents
-from Player import Player
+from Player.Player import Player
 
 
 class PC(Player):
