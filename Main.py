@@ -1,4 +1,11 @@
+# pygame相关
 from pygame.locals import *
+
+# 实体类
+from GameManager import GameManager
+from Enums import GameStatus, PlayerTurn, Incidents
+from LandManage import Landmasses
+from ShootDice import ShootDice
 
 
 if __name__ == "__main__":
