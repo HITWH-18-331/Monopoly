@@ -63,7 +63,7 @@ class Player:
 
     def messages(self, all_lands):
         base_messages = self.__base_messages()
-        incidents_messages = self.__incidents_messages(all_lands)
+        incidents_messages = self.incidents_messages(all_lands)
         return base_messages, incidents_messages
 
     def __base_messages(self):
@@ -80,17 +80,17 @@ class Player:
         return messages
 
     @abstractmethod
-    def __incidents_messages(self, all_lands):
+    def incidents_messages(self, all_lands):
         pass
 
     @abstractmethod
-    def buy(self, land):
+    def buy(self):
         pass
 
     @abstractmethod
-    def __buy_land(self, land):
+    def buy_land(self):
         pass
 
     @abstractmethod
-    def __buy_horse(self):
+    def buy_horse(self):
         pass

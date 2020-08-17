@@ -43,7 +43,7 @@ class NPC(Player):
                 self.free = True
         return 0
 
-    def __incidents_messages(self, all_lands):
+    def incidents_messages(self, all_lands):
         land = all_lands.lands[self.position]
         messages = list()
 
@@ -142,10 +142,10 @@ class NPC(Player):
     def buy(self, land, land_is_full):
         price = land.price(self.name)
         if (self.money - price) >= self.__money_left_line() or self.free is True:
-            self.__buy_land(land, land_is_full) if price != 0 else False
-            self.__buy_horse() if land.incident is Incidents.horseField else False
+            self.buy_land(land, land_is_full) if price != 0 else False
+            self.buy_horse() if land.incident is Incidents.horseField else False
 
-    def __buy_land(self, land, land_is_full):
+    def buy_land(self, land, land_is_full):
         price = land.price(self.name)
         level = land.level
         if level == 0 or self.free or \
@@ -158,7 +158,7 @@ class NPC(Player):
             land.change_property(self.name)
             self.houseCounter[land.level - 1] += 1
 
-    def __buy_horse(self):
+    def buy_horse(self):
         if self.money >= 1500 and self.transportation == "无":
             self.money -= 1000
             self.transportation = "战马"
