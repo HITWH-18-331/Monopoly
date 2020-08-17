@@ -6,6 +6,8 @@ from GameManager import GameManager
 from Enums import GameStatus, PlayerTurn, Incidents
 from LandManage import Landmasses
 from ShootDice import ShootDice
+from Player.NPC import NPC
+from Player.PC import PC
 
 
 if __name__ == "__main__":

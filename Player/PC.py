@@ -1,8 +1,9 @@
 from random import randint
 from Enums import Incidents
+from Player import Player
 
 
-class Player:
+class PC(Player):
     def __init__(self, name):
         self.name = name
         self.position = 0                   # 初始位置
