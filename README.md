@@ -26,3 +26,17 @@
 ## 开源声明
 
 本项目仅作学习交流用，任何直接挪用该项目的行为都是对我们劳动成果的不尊重。
+
+## `Bug`总结
+
+1. 再次遇到了包引入问题，还是跟`python`大作业一样的问题
+
+    ```python
+    # 1. 该方式只引入了文件，没有引入文件中的类
+    from Player import Player
+    
+    # 2. 该方式直接引入了相应的类
+    from Player.Player import Player
+    ```
+
+    
