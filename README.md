@@ -39,4 +39,4 @@
     from Player.Player import Player
     ```
 
-    
+2. `Python`私有方法被继承不能重写，或者说重写是没有作用的，又或者是我的用法不对，尚待测试或进一步了解。
