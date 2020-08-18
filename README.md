@@ -2,6 +2,12 @@
 
 大富翁游戏设计与实现，该仓库旨在对我们的大一年度项目计划进行整理，使用更多的模块划分和`OOD`的相关知识
 
+## 所有的仓库地址
+
+- `Github`：[点此前往](https://github.com/HITWH-18-331/Monopoly)
+- `Gitee`：[点此前往](https://gitee.com/rikdon/Monopoly)
+- `Gitlab`：[点此前往](https://gitlab.com/Rik-Don/monopoly)
+
 ## 团队成员
 
 - **初征**
