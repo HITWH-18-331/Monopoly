@@ -15,6 +15,10 @@
 - **董成相**
 - **付宽**
 
+## 简单的演示动画
+
+<img src="./MonopolySimplePresentation.gif" alt="一个简单的演示动画" style="zoom:90%;" />
+
 ## 目录结构介绍
 
 1. `OldProject`：该文件夹是整理前的工程文件，对外部的`source`和`dog.ico`文件有依赖
