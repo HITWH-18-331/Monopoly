@@ -4,7 +4,7 @@
 
 ## 所有的仓库地址
 
-- `Github`：[点此前往](https://github.com/HITWH-18-331/Monopoly)
+- `Github`：[点此前往](https://github.com/HITWH-18-331/Monopoly)，可以在这里获取`Release`文件
 - `Gitee`：[点此前往](https://gitee.com/rikdon/Monopoly)
 - `Gitlab`：[点此前往](https://gitlab.com/Rik-Don/monopoly)
 
