@@ -43,6 +43,12 @@
     1. 爱给——专注免费素材，[点此前往](http://www.aigei.com)
     2. 其他来源，如有侵权请联系我们
 
+## `Releases`打包方式介绍
+
+1. `Pyinstaller`：家喻户晓
+2. `Nuitka`：小众打包库，据说可以打包后可以获得`C++`级的运行效率，但是相比`Pyinstaller`打包较慢，[点此前往阅读官方文档](http://www.nuitka.net/doc/user-manual.html)
+    1. 使用的`MinGW`版本：x86_64-7.3.0-release-posix-seh-rt_v5-rev0，[点此前往下载](https://sourceforge.net/projects/mingw-w64/files/Toolchains targetting Win64/Personal Builds/mingw-builds/7.3.0/threads-posix/seh/x86_64-7.3.0-release-posix-seh-rt_v5-rev0.7z/)
+
 ## `Bug`总结
 
 1. 再次遇到了包引入问题，还是跟`python`大作业一样的问题
