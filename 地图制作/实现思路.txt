@@ -1,0 +1,90 @@
+全局变量
+clock			帧率控制
+screen			输出屏幕
+
+start			开始界面图片
+gameMap		地图图片
+PCImage			玩家人物图片
+NPCImage		电脑人物图片
+wasteland			空地图片
+cattleOfPC		玩家城堡图片
+cattleOfNPC		电脑城堡图片
+gameOver		玩家破产图片
+gameWin			玩家获胜图片
+
+font			游戏输出字体
+
+incidents			特殊事件
+
+lands			Land类集合，存储地块
+
+全局函数
+def locationChange()	坐标转换函数
+
+
+游戏玩家类
+变量
+playerControl	控制者，bool（PC/NPC）
+name		姓名，string
+position		坐标序号，int
+money		资金，int
+image		人物肖像
+transportation	交通工具，string
+status		状态，string
+engine		主动移动一格，int
+chance		互换资金的机会，bool
+item		持有的道具，string
+ill		疾病状态，int
+wind		遇到大风，bool
+free		与当地盟主结好，bool
+cheat[3]		开发者模式
+messageBoardLocation	信息面板位置，list(tuple(x, y))
+
+
+函数
+move()		移动，Done
+check()		开发者模式检查，Done
+display()		代理方法，Done
+__displayBase()	输出信息：坐标，状态，装备，物品，资金，事件
+__displayIncidents()	输出事件提示信息
+shopping()	分流购买，Done
+__buy()		PC购买，Done
+__autoBuy()	NPC购买，Done
+incidents()	触发特殊事件处理
+
+
+地块类
+变量
+owner		持有者，string
+level		等级，int
+image		图片，形状
+incident		事件，string
+position		坐标，用于计算在地图上的像素坐标
+
+函数
+price()		返回地块价格，以0表示不可购买
+changeProperty()	购买后修改地块信息
+bang()		使用炸药后的地块属性重设
+
+注意事项：
+特殊事件地块不能购买
+
+待解决问题：
+PC房屋图片载入问题，已解决，这个很坑爹，字符串判断相等失效，总是提示为pygame.surface对象，即使强转为str/最终的结果是我传错了参数，我的错
+马场不能买马，已解决
+监狱出不来，已解决
+房间的租金收入问题，代码已加，效果存疑，经过细致的查看日志，效果很好
+开始界面重构，已解决
+结束界面重构，已解决
+NPC事件处理，已通过函数的调用顺序进行初步处理，有待继续加强
+NPC事件处理加强版（尝试使用循环处理）已解决，但不是循环，依然使用函数的调用顺序去解决
+
+资金互换存在问题，增加一个地块事件判断，或者在move函数后增加enemy.free=False，已解决，后一方案存在问题
+千里马额外移动的事件触发解决可以通过engine变量进行处理，已解决
+在NPC的buy函数调用时，使用一个循环实现房屋的即刻升级，已解决
+NPC的buy函数进入条件增加对购买房屋后的资金余额的预先判断，保证资金不低于500，已解决
+incidents方法增加对感冒状态的判断，应该适用于log版，已解决
+游戏进行中的退出仍可优化，已解决
+续：千里马的额外移动，在display的调用中增添对engine的值检验，incidents方法也需增加检验，已解决
+在incidents方法内增加地块被买满的时候的资金奖励，displayincidents函数也要做相应修改，已解决
+尝试使得NPC对事件的响应即刻展示到信息面板，尝试使用pygame的event发送事件实现彻底的过程化以实现此效果，已解决

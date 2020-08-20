@@ -1,0 +1,150 @@
+class PC：PC的维护者
+变量：
+	name
+	position
+	money
+	image
+	houseCounter，新增，用于地图被买满的时候的奖励依据
+	transportation
+	status
+	engine，用于千里马状态的额外移动
+	chance，用于标记能否进行资金互换
+	item，携带炸药
+	ill，用于3回合内半速移动
+	wind，标记是否遭遇大风
+	free，标记是否能免费购买或升级城堡
+	messageBoardLocation，存储信息输出的首坐标
+方法：
+	__init__，构造函数，私有
+	move，人物移动，会进行监禁状态，感冒状态，以及是否遭遇大风的检查
+	display，代理函数，用于调用__display_base和__dispaly_incidents
+	__display_base，输出基本信息，私有
+	__display_incidents，输出事件信息，私有
+	buy，购买函数，用于购买或升级房屋，以及马匹的购买
+	incidents，用于处理事件，包含路过敌人房屋及事件地块的特殊事件
+
+class NPC：NPC的维护者
+变量：
+	name
+	position
+	money
+	image
+	houseCounter，记录各等级的房屋数量，累计计数，如，有一个2级房屋，则1，2级的房屋数均会加1，用于NPC的低智能自动化购买
+	transportation
+	status
+	engine，同PC
+	chance，同PC
+	item，同PC
+	ill，同PC
+	wind，同PC
+	free，同PC
+	cheat，用于开发者模式的标记
+	messageBoardLocation，同PC
+方法：
+	__init__，构造函数，私有
+	move，同PC
+	check，开发者模式的检查
+	display，同PC，不过增加了check函数的调用
+	__display_base，同PC
+	__display_incidents，同PC
+	buy，功能同PC，增加了更多的判断语句以实现低智能自动化的购买
+	incidents，同PC
+	__money_left_line，新增，用于分级确保NPC的剩余金额
+
+class landmasses：地图上所有地块的维护者
+变量：
+	cattleOfPC，存储PC的房屋图片
+	cattleOfNPC，存储NPC的房屋图片
+	wasteland，空地图片，全透明的图片，为了增强代码的普适性，无实际用处
+	incidents，存储事件地块的事件名称
+	lands，用于存储每个地块的属性
+	PCName，用于存储PC的姓名，用于后续的地块属性修改函数的判断
+	NPCName，用于存储NPC的姓名，用于后续的地块属性修改函数的判断
+	
+	class OneLand：单个地块的维护者
+	变量：
+		owner，地块所有者，四个对象：系统（空地）、事件、PC、NPC
+		position，尝试优化，将OneLand类作成一个结构体的感觉，将现有方法移植到大类中，想法有问题，坐标转化时会用到position变量，需保留
+		level，地块房屋的等级，空地和事件为0
+		image
+		incident，存储事件名称
+	函数：
+		__init__，构造函数，私有
+		price函数，返回地块的价值，不能被购买则返回0
+		changeProperty，用于地块被购买后的地块属性的变更
+		bang，用于地块的房屋被炸掉之后的属性变更
+函数：
+	__init__，构造函数，私有
+	is_full，判断地块是否被买满，用于地图被买满的奖励操作
+
+class ShootDice：骰子管理类，新增
+变量：
+	image，存储骰子图片，列表
+	final_image，存储最终的骰子图片，列表
+	image_location，骰子图片位置，列表
+	random_series，存储随机序列，列表
+函数：
+	__prepare_image，用于设置最终展示的图片，私有
+	__get_random_series，生成一个随机数列，私有
+	set_dice，代理函数同时兼顾设置骰子的位置
+
+class Turn：回合切换枚举变量，新增
+	start = 0，某一轮的开始
+	PC = 1，PC掷骰子
+	PC_end，等待PC响应事件
+	NPC，NPC掷骰子及响应事件
+
+全局函数：
+location_convert，坐标转换函数，序号转换为在窗口上的像素坐标
+
+全局变量：
+icon，图标
+start，开始图片
+gameOver，PC玩家游戏失败图片
+gameWin，PC玩家胜利图片
+gameMap，游戏地图
+PCImage，PC的人物肖像
+PCFixImage，游戏开始动画效果所用图片以及messageBoard展示的人物肖像
+NPCImage，NPC的人物肖像
+NPCFixImage，游戏开始动画效果所用图片以及messageBoard展示的人物肖像
+barrier，用于游戏开始和结束覆盖骰子面板，新增
+font，messageBoard字体
+clock，帧率控制时钟
+screen，图片输出的载体
+hero，PC玩家
+enemy，NPC玩家
+shootDice，骰子管理对象，新增
+diceLocation，用于临时存储骰子的位置，新增
+steps，用于临时存储PC，NPC的骰子点数及感冒或监禁状态，新增
+lands，地图所有地块的维护变量
+heroTurn，enemyTurn，回合控制变量，已删除
+turnControl，回合控制变量，新增
+keySpace，用于存储空格事件，简化游戏的操作，新增
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

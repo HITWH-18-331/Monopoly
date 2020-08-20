@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.2" tiledversion="1.2.4" orientation="orthogonal" renderorder="right-down" width="12" height="7" tilewidth="50" tileheight="50" infinite="0" nextlayerid="14" nextobjectid="1">
+ <tileset firstgid="1" name="source2" tilewidth="50" tileheight="50" tilecount="70" columns="10">
+  <image source="D:/My files/FileReceive/VX非官方RTP素材整合第一弹-TileA2_爱给网_aigei_com.png" trans="6a9b00" width="512" height="384"/>
+ </tileset>
+ <tileset firstgid="71" name="source1" tilewidth="50" tileheight="50" tilecount="32" columns="8">
+  <image source="D:/My files/FileReceive/VX非官方RTP素材整合第一弹-TileA3_爱给网_aigei_com.png" trans="6a9b00" width="400" height="200"/>
+ </tileset>
+ <tileset firstgid="103" name="messageBoard" tilewidth="50" tileheight="50" tilecount="40" columns="8">
+  <image source="D:/My files/FileReceive/信息面板.png" trans="6a9b00" width="438" height="272"/>
+ </tileset>
+ <tileset firstgid="143" name="thief" tilewidth="50" tileheight="50" tilecount="9" columns="3">
+  <image source="D:/My files/FileReceive/thief.png" trans="6a9b00" width="150" height="150"/>
+ </tileset>
+ <tileset firstgid="152" name="change" tilewidth="50" tileheight="50" tilecount="9" columns="3">
+  <image source="D:/My files/FileReceive/change.png" trans="6a9b00" width="150" height="150"/>
+ </tileset>
+ <tileset firstgid="161" name="bomb" tilewidth="50" tileheight="50" tilecount="9" columns="3">
+  <image source="D:/My files/FileReceive/bomb.png" trans="6a9b00" width="150" height="150"/>
+ </tileset>
+ <tileset firstgid="170" name="coin" tilewidth="50" tileheight="50" tilecount="9" columns="3">
+  <image source="D:/My files/FileReceive/coin.png" trans="6a9b00" width="150" height="150"/>
+ </tileset>
+ <tileset firstgid="179" name="hospital" tilewidth="50" tileheight="50" tilecount="9" columns="3">
+  <image source="D:/My files/FileReceive/hospital.png" trans="6a9b00" width="150" height="150"/>
+ </tileset>
+ <tileset firstgid="188" name="wind" tilewidth="50" tileheight="50" tilecount="9" columns="3">
+  <image source="D:/My files/FileReceive/wind.jpg" trans="6a9b00" width="150" height="150"/>
+ </tileset>
+ <tileset firstgid="197" name="change2" tilewidth="50" tileheight="50" tilecount="9" columns="3">
+  <image source="D:/My files/FileReceive/change2.png" trans="6a9b00" width="150" height="150"/>
+ </tileset>
+ <tileset firstgid="206" name="king" tilewidth="50" tileheight="50" tilecount="9" columns="3">
+  <image source="D:/My files/FileReceive/king.png" trans="6a9b00" width="150" height="150"/>
+ </tileset>
+ <tileset firstgid="215" name="king2" tilewidth="50" tileheight="50" tilecount="9" columns="3">
+  <image source="D:/My files/FileReceive/king2.png" trans="6a9b00" width="150" height="150"/>
+ </tileset>
+ <tileset firstgid="224" name="king4" tilewidth="50" tileheight="50" tilecount="9" columns="3">
+  <image source="D:/My files/FileReceive/king4.png" trans="6a9b00" width="150" height="150"/>
+ </tileset>
+ <tileset firstgid="233" name="king5" tilewidth="50" tileheight="50" tilecount="9" columns="3">
+  <image source="D:/My files/FileReceive/king5.png" trans="6a9b00" width="150" height="150"/>
+ </tileset>
+ <tileset firstgid="242" name="map" tilewidth="50" tileheight="50" tilecount="3249" columns="57">
+  <image source="D:/My files/FileReceive/Map_05.png" trans="6a9b00" width="2880" height="2880"/>
+ </tileset>
+ <tileset firstgid="3491" name="begin1" tilewidth="50" tileheight="50" tilecount="9" columns="3">
+  <image source="D:/My files/FileReceive/begin1.png" trans="6a9b00" width="150" height="150"/>
+ </tileset>
+ <tileset firstgid="3500" name="jailDoor" tilewidth="50" tileheight="50" tilecount="9" columns="3">
+  <image source="D:/My files/FileReceive/jailDoor.png" trans="6a9b00" width="150" height="150"/>
+ </tileset>
+ <tileset firstgid="3509" name="horse" tilewidth="50" tileheight="50" tilecount="9" columns="3">
+  <image source="D:/My files/FileReceive/horse.bmp" trans="6a9b00" width="150" height="150"/>
+ </tileset>
+ <tileset firstgid="3518" name="horse2" tilewidth="50" tileheight="50" tilecount="9" columns="3">
+  <image source="D:/My files/FileReceive/horse - 副本.jpg" trans="6a9b00" width="150" height="150"/>
+ </tileset>
+ <tileset firstgid="3527" name="thief2" tilewidth="50" tileheight="50" tilecount="9" columns="3">
+  <image source="D:/My files/FileReceive/thief2small.png" trans="6a9b00" width="150" height="150"/>
+ </tileset>
+ <tileset firstgid="3536" name="theif3Small" tilewidth="50" tileheight="50" tilecount="9" columns="3">
+  <image source="D:/My files/FileReceive/theif3Small.png" trans="6a9b00" width="150" height="150"/>
+ </tileset>
+ <layer id="12" name="底层" width="12" height="7">
+  <data encoding="csv">
+90,90,90,90,90,90,90,90,90,90,90,90,
+90,90,90,90,90,90,90,90,90,90,90,90,
+90,90,90,90,90,90,90,90,90,90,90,90,
+90,90,90,90,90,90,90,90,90,90,90,90,
+90,90,90,90,90,90,90,90,90,90,90,90,
+90,90,90,90,90,90,90,90,90,90,90,90,
+90,90,90,90,90,90,90,90,90,90,90,90
+</data>
+ </layer>
+</map>
