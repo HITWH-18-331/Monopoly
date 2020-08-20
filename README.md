@@ -38,7 +38,7 @@
 
 ## 地图制作
 
-1. 使用到的软件：`Tiled Map Editor`
+1. 使用到的软件：`Tiled Map Editor`，[点此前往获取](https://www.mapeditor.org/)
 2. 素材来源：
     1. 爱给——专注免费素材，[点此前往](http://www.aigei.com)
     2. 其他来源，如有侵权请联系我们
